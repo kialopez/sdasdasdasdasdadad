@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-class Node {
-    int data;
-    Node left, right;
+class BinarySearchTree {
+    static class Node {
+        int data;
+        Node left, right;
 
-    public Node(int item) {
-        data = item;
-        left = right = null;
+        public Node(int item) {
+            data = item;
+            left = right = null;
+        }
     }
-}
 
-public class BinarySearchTree {
     Node root;
 
     BinarySearchTree() {
