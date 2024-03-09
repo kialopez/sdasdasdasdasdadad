@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-class BinarySearchTree {
-    static class Node {
-        int data;
-        Node left, right;
+class Node {
+    int data;
+    Node left, right;
 
-        public Node(int item) {
-            data = item;
-            left = right = null;
-        }
+    public Node(int item) {
+        data = item;
+        left = right = null;
     }
+}
 
+public class BinarySearchTree {
     Node root;
 
     BinarySearchTree() {
@@ -78,12 +78,12 @@ class BinarySearchTree {
     }
 
     void displayArrayRec(Node root) {
-    if (root != null) {
-        System.out.print(root.data + " ");
-        displayArrayRec(root.left);
-        displayArrayRec(root.right);
+        if (root != null) {
+            System.out.print(root.data + " ");
+            displayArrayRec(root.left);
+            displayArrayRec(root.right);
+        }
     }
-}
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -93,28 +93,20 @@ class BinarySearchTree {
             System.out.println("Enter an integer to insert into the binary search tree:");
             int value = scanner.nextInt();
             tree.insert(value);
-            System.out.println("Do you want to insert another value? (yes/no)");
+            System.out.println("Binary Search Tree after inserting " + value + ":");
+            tree.displayArray();
+            System.out.println("Inorder Traversal:");
+            tree.inorder();
+            System.out.println("\nPreorder Traversal:");
+            tree.preorder();
+            System.out.println("\nPostorder Traversal:");
+            tree.postorder();
+            System.out.println("\nDo you want to try again? (yes/no)");
             String choice = scanner.next();
             if (!choice.equalsIgnoreCase("yes")) {
                 continueLoop = false;
             }
         }
         scanner.close();
-
-        // Printing 1-D array representation
-        System.out.println("1-D Array Representation:");
-        tree.displayArray();
-
-        // Printing preorder traversal
-        System.out.println("Preorder Traversal:");
-        tree.preorder();
-
-        // Printing postorder traversal
-        System.out.println("\nPostorder Traversal:");
-        tree.postorder();
-
-        // Printing inorder traversal
-        System.out.println("\nInorder Traversal:");
-        tree.inorder();
     }
 }
