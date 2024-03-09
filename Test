@@ -78,12 +78,12 @@ class BinarySearchTree {
     }
 
     void displayArrayRec(Node root) {
-        if (root != null) {
-            displayArrayRec(root.left);
-            System.out.print(root.data + " ");
-            displayArrayRec(root.right);
-        }
+    if (root != null) {
+        System.out.print(root.data + " ");
+        displayArrayRec(root.left);
+        displayArrayRec(root.right);
     }
+}
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
