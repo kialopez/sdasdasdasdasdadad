@@ -86,27 +86,28 @@ class BinarySearchTree {
     }
 
     public static void main(String[] args) {
-    BinarySearchTree tree = new BinarySearchTree();
+        BinarySearchTree tree = new BinarySearchTree();
 
-    // Inserting values into the binary search tree
-    int[] values = {5, 9, 3, 2, 4, 8};
-    for (int value : values) {
-        tree.insert(value);
+        // Inserting values into the binary search tree
+        int[] values = {5, 9, 3, 2, 4, 8};
+        for (int value : values) {
+            tree.insert(value);
+        }
+
+        // Printing 1-D array representation
+        System.out.println("1-D Array Representation:");
+        tree.displayArray();
+
+        // Printing preorder traversal
+        System.out.println("Preorder Traversal:");
+        tree.preorder();
+
+        // Printing postorder traversal
+        System.out.println("\nPostorder Traversal:");
+        tree.postorder();
+
+        // Printing inorder traversal
+        System.out.println("\nInorder Traversal:");
+        tree.inorder();
     }
-
-    // Printing 1-D array representation
-    System.out.println("1-D Array Representation:");
-    tree.displayArray();
-
-    // Printing preorder traversal
-    System.out.println("Preorder Traversal:");
-    tree.preorder();
-
-    // Printing postorder traversal
-    System.out.println("\nPostorder Traversal:");
-    tree.postorder();
-
-    // Printing inorder traversal
-    System.out.println("\nInorder Traversal:");
-    tree.inorder();
 }
