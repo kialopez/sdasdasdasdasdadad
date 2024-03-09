@@ -79,8 +79,8 @@ class BinarySearchTree {
 
     void displayArrayRec(Node root) {
         if (root != null) {
-            System.out.print(root.data + " ");
             displayArrayRec(root.left);
+            System.out.print(root.data + " ");
             displayArrayRec(root.right);
         }
     }
