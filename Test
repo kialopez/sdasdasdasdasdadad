@@ -86,27 +86,27 @@ class BinarySearchTree {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        BinarySearchTree tree = new BinarySearchTree();
-        boolean continueLoop = true;
-        while (continueLoop) {
-            System.out.println("Enter an integer to insert into the binary search tree:");
-            int value = scanner.nextInt();
-            tree.insert(value);
-            System.out.println("Binary Search Tree after inserting " + value + ":");
-            tree.displayArray();
-            System.out.println("Inorder Traversal:");
-            tree.inorder();
-            System.out.println("\nPreorder Traversal:");
-            tree.preorder();
-            System.out.println("\nPostorder Traversal:");
-            tree.postorder();
-            System.out.println("\nDo you want to try again? (yes/no)");
-            String choice = scanner.next();
-            if (!choice.equalsIgnoreCase("yes")) {
-                continueLoop = false;
-            }
-        }
-        scanner.close();
+    BinarySearchTree tree = new BinarySearchTree();
+
+    // Inserting values into the binary search tree
+    int[] values = {5, 9, 3, 2, 4, 8};
+    for (int value : values) {
+        tree.insert(value);
     }
+
+    // Printing 1-D array representation
+    System.out.println("1-D Array Representation:");
+    tree.displayArray();
+
+    // Printing preorder traversal
+    System.out.println("Preorder Traversal:");
+    tree.preorder();
+
+    // Printing postorder traversal
+    System.out.println("\nPostorder Traversal:");
+    tree.postorder();
+
+    // Printing inorder traversal
+    System.out.println("\nInorder Traversal:");
+    tree.inorder();
 }
